@@ -5,10 +5,10 @@ import random
 # Inicializa o Pygame
 pygame.init()
 
-# Carrega o tabuleiro em tamanho original
-tabuleiro_img = pygame.image.load("tabuleiro.jpeg")
-tabuleiro_rect = tabuleiro_img.get_rect()
-WIDTH, HEIGHT = tabuleiro_rect.size
+# Carrega o tabuleiro 
+tabuleiro_img_original = pygame.image.load("start.png")
+tabuleiro_img = pygame.transform.scale(tabuleiro_img_original, (1500, 800))  # ou o tamanho que você quiser
+WIDTH, HEIGHT = 1500, 800
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Tabuleiro com Peões Arrastáveis e Dado")
 
